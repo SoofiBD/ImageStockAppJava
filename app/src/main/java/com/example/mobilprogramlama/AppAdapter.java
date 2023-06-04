@@ -34,10 +34,12 @@ public class AppAdapter extends RecyclerView.Adapter<AppAdapter.AppHolder> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(holder.itemView.getContext(), DetailsActivity.class);
                 intent.putExtra("karikatür",karikatürArrayList.get(position).id);
                 intent.putExtra("info","old");
                 holder.itemView.getContext().startActivity(intent);
+
 
                 //startActivity(intent);
             }
